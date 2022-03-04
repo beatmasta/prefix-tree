@@ -7,13 +7,13 @@
 class Trie {
 	
   constructor(bigData) {
-  	this._prefixTree = {};
-  	this._data = bigData;
+    this._prefixTree = {};
+    this._data = bigData;
     this._build();
   }
   
   get tree() {
-  	return this._prefixTree;
+    return this._prefixTree;
   }
   
   _addData(tree, charArr) {
@@ -26,10 +26,10 @@ class Trie {
     
   }
   
-	_build() {
+  _build() {
   	
     this._data.forEach(str => {
-    	this._addData(this.tree, str.split(''));
+      this._addData(this.tree, str.split(''));
     });
     
   }
@@ -65,10 +65,10 @@ const textFile = [
   'http://carbonmade.com/',
   'http://dochub.io/',
   'http://dropr.com/',
-	'http://epilogger.com/',
-	'https://google.com',
-	'http://fontello.com/',
-	'http://g.etfv.co/'
+  'http://epilogger.com/',
+  'https://google.com',
+  'http://fontello.com/',
+  'http://g.etfv.co/'
 ];
 
 const trie = new Trie(textFile);
